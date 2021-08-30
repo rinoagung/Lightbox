@@ -1,0 +1,184 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../Fonts/Roboto-Regular.woff") format("woff");
+}
+
+body {
+    font: 18px/36px Roboto, arial;
+    background-color: lightgray;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+}
+
+.container {
+    width: 700px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    padding-right: 10px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    border: 5px solid darkslategray;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+.gallery li,
+.gallery li a img,
+.gallery li span {
+    border-radius: 50%;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(211, 211, 211, 0.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    font-weight: 500;
+    line-height: 120px;
+    color: black;
+    text-shadow: 2px 2px 2px lightgray;
+    opacity: 0;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.clear {
+    clear: both;
+}
+
+/* overlay */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 1s;
+    z-index: 30;
+}
+
+.overlay:target {
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.555);
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay img,
+.overlay {
+    max-height: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.overlay:target img {
+    animation: fade 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    left: 70%;
+    color: red;
+    text-decoration: none;
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.288);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    opacity: 0;
+}
+
+.overlay:target .close {
+    animation: down 0.5s 0.5s forwards;
+}
+
+/* Navigasi */
+.next,
+.prev {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url(../Gambar/arrow_r.png);
+    top: 40%;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url(../Gambar/arrow_l.png);
+    margin-left: -100px;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fade 0.5s 0.5s forwards;
+}
+
+/* tambal */
+.tambal {
+    width: 640px;
+    height: 540px;
+    background-color: rgba(0, 255, 255, 0);
+    margin: auto;
+    padding: 140px 0;
+    max-height: 100%;
+}
+
+/* Animasi */
+/* @keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 100;
+        transform: scale(1);
+    }
+} */
+
+@keyframes down {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

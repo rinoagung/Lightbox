@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gallery</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <h1>Product</h1>
+        <div class="container">
+            <div class="gallery">
+                <ul>
+                    <li>
+                        <a href="#burger">
+                            <img src="Thumbnail/t_burger.jpg" alt="Burger" />
+                            <span>Burger</span>
+                        </a>
+                        <div class="overlay" id="burger">
+                            <a href="#" class="close">x</a>
+                            <a href="#wine" class="prev"></a>
+                            <img src="Gambar/burger.jpg" alt="" />
+                            <a href="#food" class="next"></a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#food">
+                            <img src="Thumbnail/t_food.jpg" alt="food" />
+                            <span>Food</span>
+                        </a>
+                        <div class="overlay" id="food">
+                            <a href="#" class="close">x</a>
+                            <a href="#burger" class="prev"></a>
+                            <img src="Gambar/food.jpg" alt="" />
+                            <a href="#ice cream" class="next"></a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#ice cream">
+                            <img src="Thumbnail/t_ice cream.jpg" alt="ice cream" />
+                            <span>Ice cream</span>
+                        </a>
+                        <div class="overlay" id="ice cream">
+                            <a href="#" class="close">x</a>
+                            <a href="#food" class="prev"></a>
+                            <img src="Gambar/ice cream.jpg" alt="" />
+                            <a href="#lemon" class="next"></a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#lemon">
+                            <img src="Thumbnail/t_lemon.jpg" alt="lemon" />
+                            <span>Lemon</span>
+                        </a>
+                        <div class="overlay" id="lemon">
+                            <a href="#" class="close">x</a>
+                            <a href="#ice cream" class="prev"></a>
+                            <img src="Gambar/lemon.jpg" alt="" />
+                            <a href="#wine" class="next"></a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#wine">
+                            <img src="Thumbnail/t_wine.jpg" alt="wine" />
+                            <span>Wine</span>
+                        </a>
+                        <div class="overlay" id="wine">
+                            <a href="#" class="close">x</a>
+                            <div class="tambal">
+                                <a href="#lemon" class="prev"></a>
+                                <img src="Gambar/wine.jpg" alt="" />
+                                <a href="#burger" class="next"></a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
